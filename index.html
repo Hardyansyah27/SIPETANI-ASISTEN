@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIPETANI Dashboard | Universitas Pamulang</title>
+
+  <link rel="icon" type="image/png" href="assets/img/logo_unpam.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <nav class="sidebar">
+      <div class="logo-area">
+        <img src="assets/img/logo_unpam.png" alt="Logo UNPAM" class="logo-img">
+        <div class="logo-text">
+          <h2>SIPETANI</h2>
+          <span>Teknik Informatika</span>
+        </div>
+      </div>
+
+      <ul class="menu-list" id="leftMenu">
+        <li>
+          <a href="pages/home.html" target="appFrame" class="active">
+            <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/panduan.html" target="appFrame">
+            <i class="fa-solid fa-book-open"></i> <span>Panduan Tanam</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/cuaca.html" target="appFrame">
+            <i class="fa-solid fa-cloud-sun"></i> <span>Info Cuaca</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/asisten.html" target="appFrame">
+            <i class="fa-solid fa-robot"></i> <span>Asisten Tani</span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/tim.html" target="appFrame">
+            <i class="fa-solid fa-users"></i> <span>Tim Pengembang</span>
+          </a>
+        </li>
+
+        <li class="menu-spacer"></li>
+
+        <li>
+          <a href="pages/kontak.html" target="appFrame" class="logout-mode">
+            <i class="fa-solid fa-headset"></i> <span>Hubungi Kami</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <small>&copy; 2025 Kelompok 10 - UNPAM</small>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <header class="top-header">
+        <div class="header-title">
+          <h3>Sistem Informasi Pertanian</h3>
+          <p class="subtitle">Fakultas Ilmu Komputer - Universitas Pamulang</p>
+        </div>
+        <div class="user-profile">
+          <span class="user-name">Mahasiswa</span>
+          <div class="avatar"><i class="fa-solid fa-user"></i></div>
+        </div>
+      </header>
+
+      <div class="content-frame-wrapper">
+        <iframe id="mainFrame" src="pages/home.html" name="appFrame" title="Konten Aplikasi"></iframe>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
