@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami - SIPETANI</title>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    (function () {
+      // Inisialisasi EmailJS dengan Public Key Anda
+      emailjs.init("5JPSHw9pk9a73fMm6");
+    })();
+  </script>
+
+  <style>
+    /* CSS Clean & Rapi */
+    body {
+      padding: 20px;
+      background-color: transparent;
+      overflow-y: auto;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .header-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header-section h2 {
+      color: var(--primary-dark);
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .header-section p {
+      color: var(--text-muted);
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .info-card {
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      color: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(14, 164, 74, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .info-item i {
+      font-size: 1.4rem;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 12px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-text h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .info-text p,
+    .info-text a {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      line-height: 1.4;
+    }
+
+    .info-text a:hover {
+      text-decoration: underline;
+    }
+
+    .form-card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid #eee;
+    }
+
+    .form-title {
+      margin-bottom: 25px;
+      color: var(--primary-dark);
+      font-size: 1.4rem;
+      font-weight: 700;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #444;
+      font-size: 0.9rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(14, 164, 74, 0.1);
+    }
+
+    .btn-submit {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 14px 25px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 1rem;
+    }
+
+    .btn-submit:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(14, 164, 74, 0.3);
+    }
+
+    .btn-submit:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Loading Spinner */
+    .loading-spinner {
+      display: none;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header-section">
+    <h2>Hubungi Kami</h2>
+    <p>Tim SIPETANI siap membantu keluhan & pertanyaan Anda.</p>
+  </div>
+
+  <div class="contact-container">
+
+    <div class="info-card">
+      <div class="info-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div class="info-text">
+          <h4>Email</h4>
+          <a href="mailto:prasetiowicaksono565@gmail.com">prasetiowicaksono565@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-brands fa-whatsapp"></i>
+        <div class="info-text">
+          <h4>WhatsApp</h4>
+          <a href="https://api.whatsapp.com/send?phone=6285731487696&text=Halo%20Admin%20SIPETANI,%20saya%20mau%20bertanya."
+            target="_blank" rel="noopener noreferrer">
+            +62 857-3148-7696
+          </a>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div class="info-text">
+          <h4>Lokasi</h4>
+          <p>Kampus Viktor, Universitas Pamulang.<br>Tangerang Selatan.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3 class="form-title">Kirim Pesan</h3>
+
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama Anda" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subjek">Subjek</label>
+          <select id="subjek" name="subjek" class="form-control">
+            <option value="Pertanyaan Umum">Pertanyaan Umum</option>
+            <option value="Laporan Bug">Laporan Bug / Error</option>
+            <option value="Saran Fitur">Saran Fitur Baru</option>
+            <option value="Kerjasama">Kerjasama</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" class="form-control" placeholder="Tuliskan pesan Anda..."
+            required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="btnKirim">
+          <i class="fa-solid fa-paper-plane" id="iconKirim"></i>
+          <i class="fa-solid fa-circle-notch loading-spinner" id="loadingIcon"></i>
+          <span id="btnText">Kirim Sekarang</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Mencegah reload halaman
+
+      // Ambil elemen tombol
+      const btnKirim = document.getElementById('btnKirim');
+      const iconKirim = document.getElementById('iconKirim');
+      const loadingIcon = document.getElementById('loadingIcon');
+      const btnText = document.getElementById('btnText');
+
+      // 1. Ubah tombol jadi status 'Loading'
+      btnKirim.disabled = true;
+      iconKirim.style.display = 'none';
+      loadingIcon.style.display = 'inline-block';
+      btnText.innerText = "Mengirim...";
+
+      // 2. KIRIM KE EMAILJS
+      // Menggunakan Service ID: service_gjwlwwj dan Template ID: template_h72qees
+      emailjs.sendForm('service_gjwlwwj', 'template_h72qees', this)
+        .then(function () {
+          // JIKA BERHASIL
+          alert('✅ BERHASIL! Pesan Anda telah terkirim ke Admin SIPETANI.');
+          document.getElementById('contact-form').reset();
+        }, function (error) {
+          // JIKA GAGAL
+          alert('❌ GAGAL: ' + JSON.stringify(error));
+          console.error('EmailJS Error:', error);
+        })
+        .finally(function () {
+          // Kembalikan tombol ke semula (Dengan titik koma lengkap)
+          btnKirim.disabled = false;
+          iconKirim.style.display = 'inline-block';
+          loadingIcon.style.display = 'none';
+          btnText.innerText = "Kirim Sekarang";
+        });
+    });
+  </script>
+
+</body>
+
+</html>

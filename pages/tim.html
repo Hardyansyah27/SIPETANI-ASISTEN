@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Pengembang - SIPETANI</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Khusus Halaman Tim (Clean & Minimalist) */
+        body {
+            padding: 20px;
+            background-color: transparent;
+            overflow-y: auto;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-section h2 {
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+        }
+
+        .header-section p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Grid Layout Responsif */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Desain Kartu Nama Simpel */
+        .member-card {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+            border-left: 5px solid var(--primary-color);
+            /* Aksen Hijau di Kiri */
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .member-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .nim-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 8px;
+            width: fit-content;
+        }
+
+        .nim-icon {
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+
+        .nim-text {
+            font-family: monospace;
+            /* Font teknis untuk angka */
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-section">
+        <h2>Tim Pengembang</h2>
+        <p>Mahasiswa Teknik Informatika - Universitas Pamulang</p>
+    </div>
+
+    <div class="team-grid">
+
+        <div class="member-card">
+            <h3 class="name">Arkananta Emier Pradipta</h3>
+            <div class="nim-container">
+                <i class="fa-solid fa-id-card nim-icon"></i>
+                <span class="nim-text">231011402231</span>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <h3 class="name">Prasetio Wicaksono</h3>
+            <div class="nim-container">
+                <i class="fa-solid fa-id-card nim-icon"></i>
+                <span class="nim-text">231011401969</span>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <h3 class="name">Ahmad Ryhan Rivaldi</h3>
+            <div class="nim-container">
+                <i class="fa-solid fa-id-card nim-icon"></i>
+                <span class="nim-text">231011403266</span>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <h3 class="name">Hardyansyah Saputra</h3>
+            <div class="nim-container">
+                <i class="fa-solid fa-id-card nim-icon"></i>
+                <span class="nim-text">231011402098</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
